@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>send2me - Connection</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1><span class="material-symbols-rounded">wifi_tethering</span> send2me</h1>
+            <p>Scan to connect</p>
+        </header>
+
+        <section class="qr-section">
+            <div class="qr-card">
+                <div class="qr-frame">
+                    <img src="/qr" alt="QR code">
+                </div>
+                
+                <div class="url-container">
+                    <span id="url-text">http://{{ host_url }}:8000/upload_web</span>
+                    <p>Copy the link</p>
+                    <button class="icon-btn" onclick="copyUrl()" title="Copiar enlace">
+                        <span class="material-symbols-rounded">content_copy</span>
+                    </button>
+                </div>
+            </div>
+        </section>     
+    </main>
+
+    <script>
+        function copyUrl() {
+            const urlText = document.getElementById('url-text').innerText;
+            navigator.clipboard.writeText(urlText).then(() => {
+                alert("Link was copied succesfully!");
+            });
+        }
+    </script>
+</body>
+</html>

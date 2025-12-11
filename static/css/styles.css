@@ -1,0 +1,211 @@
+:root {
+    --bg-color: #000000;       
+    --card-bg: #111111;        
+    --primary: #4f46e5;        
+    --text-main: #ffffff;      
+    --text-sec: #6b7280;       
+    --border-radius: 24px;     
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;             
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;         
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 380px;          
+    text-align: center;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;                 
+    color: var(--text-main);
+}
+
+header h1 .material-symbols-rounded {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+header p {
+    color: var(--text-sec);
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.qr-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01); 
+}
+
+.qr-frame {
+    margin-bottom: 1.5rem;
+}
+
+.qr-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;       
+    display: block;
+}
+
+
+.url-container {
+    background-color: var(--bg-color);
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 10px;
+}
+
+#url-text {
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 0.85rem;
+    color: var(--text-sec);
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    max-width: 200px;
+}
+
+
+.url-container p {
+    display: none; 
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.icon-btn:hover {
+    background-color: rgba(79, 70, 229, 0.1); 
+}
+
+.upload-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.drop-zone {
+    border: 2px dashed #374151; 
+    border-radius: 16px;
+    padding: 3rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.drop-zone:hover, .drop-zone.dragover {
+    border-color: var(--primary);
+    background-color: var(--primary-translucent);
+}
+
+.icon-large {
+    font-size: 4rem; 
+    color: var(--primary);
+}
+
+.drop-text {
+    color: var(--text-sec);
+    line-height: 1.5;
+}
+
+.alert {
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: left;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.alert.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border: 1px solid var(--success-bg);
+}
+
+.alert.error {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border: 1px solid var(--error-bg);
+}
+
+.loading-container {
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-main);
+}
+
+.loading-container p small {
+    color: var(--text-sec);
+    display: block;
+    margin-top: 5px;
+}
+
+.spin-animation {
+    font-size: 3rem;
+    color: var(--primary);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
