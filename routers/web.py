@@ -1,12 +1,14 @@
+import sys
 import os
 import socket
 from fastapi import APIRouter, Request
 from fastapi.templating import Jinja2Templates
 from routers.conection import get_local_ip
 from fastapi.responses import HTMLResponse
+from main import resource_path
 
 router = APIRouter(tags=["web"])
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory=resource_path("templates"))
 
 
 
