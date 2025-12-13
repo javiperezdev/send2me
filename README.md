@@ -73,7 +73,7 @@ src/
 
 Instead of trusting file extensions (which can be easily spoofed), `send2me` reads the first 2048 bytes of the file buffer to determine its true hex signature.
 
--   **Code**: [See `routers/uploading.py`](https://www.google.com/search?q=routers/uploading.py)
+-   **Code**: [See `routers/uploading.py`]
 
 -   **Benefit**: Prevents a user from uploading a `.exe` renamed as `.jpg`.
 
@@ -84,7 +84,7 @@ Instead of trusting file extensions (which can be easily spoofed), `send2me` rea
 
 -   [ ] **End-to-End Encryption**: Implement HTTPS with self-signed cert generation for public Wi-Fi safety.
 
--   [ ] **Making it more user friendly**: giving an `.exe` file with all installed so it would be just a few clicks to use the tool  
+-   [x] **Making it more user friendly**: giving an `.exe` file with all installed, so it would be just a few clicks to use the tool  
 
 * * * * *
 
