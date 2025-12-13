@@ -85,6 +85,7 @@ The application follows a modular "Router" pattern to maintain clean separation 
 ```
 src/
 ├── main.py              # Application entry point & static mounts
+├── utils.py              # Utilities
 ├── routers/
 │   ├── conection.py     # Network discovery & QR code generation
 │   ├── uploading.py     # File validation logic & disk I/O
@@ -120,10 +121,7 @@ Instead of trusting file extensions (which can be easily spoofed), `send2me` rea
 
 **Javiperezdev**
 
-
--   **LinkedIn**: [Link to your LinkedIn]
-
--   **GitHub**: [@javiperezdev](https://es.linkedin.com/in/francisco-javier-p%C3%A9rez-pastor-544830385)
+-   **LinkedIn**: [[Link to your LinkedIn](https://es.linkedin.com/in/francisco-javier-p%C3%A9rez-pastor-544830385)]
 
 * * * * *
 

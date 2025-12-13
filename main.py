@@ -1,13 +1,11 @@
-import sys 
-import os
 from fastapi import FastAPI, Request
 from routers.uploading import router as router_upload
 from routers.conection import router as router_conection
 from routers.web import router as router_web
-from routers.web import resource_path
 from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates;
+from fastapi.templating import Jinja2Templates
 from fastapi.responses import RedirectResponse
+from utils import resource_path
 
 app = FastAPI()
 
