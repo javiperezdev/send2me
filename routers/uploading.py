@@ -66,8 +66,8 @@ async def upload_file(request: Request, file: UploadFile = File(...)):
             shutil.copyfileobj(file.file, buffer)
         return templates.TemplateResponse("upload.html", {
             "request" : request,
-            "message" : "File was succesfully shared, it is located in your download directory",
-            "type" : "succes",
+            "message" : "File was successfully shared, it is located in your download directory",
+            "type" : "success",
             "server_ip" : get_local_ip()
         } )
     

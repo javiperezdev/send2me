@@ -5,7 +5,14 @@ from fastapi import APIRouter, Request
 from fastapi.templating import Jinja2Templates
 from routers.conection import get_local_ip
 from fastapi.responses import HTMLResponse
-from main import resource_path
+
+def resource_path(relative_path): # Logic for the PyInstaller.
+    try:
+        base_path = sys.MEIPASS
+    except Exception as e:
+        base_path = os.path.dirname(os.path.abspath(__file__))
+
+    return os.path.join(base_path, "..", relative_path) 
 
 router = APIRouter(tags=["web"])
 templates = Jinja2Templates(directory=resource_path("templates"))

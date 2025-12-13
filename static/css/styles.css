@@ -1,10 +1,38 @@
+@font-face {
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/icons.woff2') format('woff2');
+}
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
 :root {
     --bg-color: #000000;       
     --card-bg: #111111;        
     --primary: #4f46e5;        
     --text-main: #ffffff;      
     --text-sec: #6b7280;       
-    --border-radius: 24px;     
+    --border-radius: 24px;
+    --primary-translucent: rgba(79, 70, 229, 0.1);
+    --success-bg: #d1fae5;
+    --success-text: #065f46;
+    --error-bg: #fee2e2;
+    --error-text: #991b1b;  
 }
 
 

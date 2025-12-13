@@ -5,6 +5,29 @@
 
 * * * * *
 
+<br>
+<p align="center">
+  <strong>📸 Project Preview</strong>
+</p>
+
+<p align="center">
+  <table>
+    <tr>
+      <td align="center" width="40%">
+        <img src="assets/mobile_preview.png" alt="Vista Móvil - Escaneo QR" width="100%">
+        <br>
+        <sub>📱 1. Scan from your mobile</sub>
+      </td>
+      <td align="center" width="60%">
+        <img src="assets/desktop_preview.png" alt="Vista Escritorio - Drag & Drop" width="100%">
+        <br>
+        <sub>💻 2. Receive to your desktop</sub>
+      </td>
+    </tr>
+  </table>
+</p>
+<br>
+
 📖 Overview
 -----------
 
@@ -23,6 +46,8 @@ Unlike cloud solutions, `send2me` keeps data strictly within the local network (
 -   **Security First**: Implements **Magic Number validation** (via `filetype` library) to verify true file MIME types, rejecting malicious binaries disguised with fake extensions.
 
 -   **Async Performance**: Built on **FastAPI** to handle concurrent requests efficiently using Python's `async/await` syntax.
+
+-   **User Friendly**: Just downloadin the `.exe` file and following the guideline from [releases](https://github.com/javiperezdev/send2me/releases).
 
 
 * * * * *
@@ -84,7 +109,9 @@ Instead of trusting file extensions (which can be easily spoofed), `send2me` rea
 
 -   [ ] **End-to-End Encryption**: Implement HTTPS with self-signed cert generation for public Wi-Fi safety.
 
--   [x] **Making it more user friendly**: giving an `.exe` file with all installed, so it would be just a few clicks to use the tool  
+-   [x] **Making it more user friendly**: Giving an `.exe` file with all installed, so it becomes a user friendly tool  
+
+-   [ ] **Making it cross platform**: Allow Windows and Mac users, having their  `.exe`.
 
 * * * * *
 
